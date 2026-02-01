@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Arc Daily | Streak to Earn</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="gradient-bg">
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+        </div>
+    </div>
+
+    <main class="app-container">
+        
+        <nav class="glass-header">
+            <div class="logo-area">
+                <div class="logo-icon">⚡</div>
+                <span class="logo-text">Arc<span class="blue-text">Daily</span></span>
+            </div>
+            <div id="walletBadge" class="wallet-pill hidden">
+                <span class="dot"></span>
+                <span id="walletAddress">0x...</span>
+            </div>
+        </nav>
+
+        <section class="hero-section">
+            <div class="streak-circle">
+                <div class="streak-inner">
+                    <span class="fire">🔥</span>
+                    <h1 id="streakDisplay">0</h1>
+                    <span class="label">Day Streak</span>
+                </div>
+                <div class="ring"></div>
+            </div>
+
+            <div class="status-card">
+                <p id="timer" class="timer">Connect wallet to begin</p>
+                <p id="status" class="status-sub">Waiting for connection...</p>
+            </div>
+        </section>
+
+        <section class="action-area">
+            <button id="connectBtn" class="btn btn-primary">
+                Connect Arc Wallet
+                <div class="btn-glow"></div>
+            </button>
+            <button id="checkInBtn" class="btn btn-success hidden" disabled>
+                Claim Daily Check-In
+                <div class="btn-glow"></div>
+            </button>
+        </section>
+
+        <section class="leaderboard-panel">
+            <div class="panel-header">
+                <h3>🏆 Global Top 10</h3>
+                <span class="live-badge">LIVE</span>
+            </div>
+            <div class="table-header">
+                <span>Rank</span>
+                <span>Player</span>
+                <span>Streak</span>
+            </div>
+            <ul id="leaderboardList" class="leaderboard-list">
+                <li class="empty-state">Connect wallet to view data</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
